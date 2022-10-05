@@ -9,7 +9,7 @@ namespace TicTacToe
     class Engine
     {
         private static bool _applicationShouldClose;
-        private Board _gameBoard;
+        private BoardScene _gameBoard;
 
         public static void EndApplication()
         {
@@ -19,7 +19,7 @@ namespace TicTacToe
         public static int GetInput()
         {
 
-            return choiceConverted;
+            return 0;
         }
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace TicTacToe
         /// </summary>
         public void Start()
         {
-            _gameBoard = new Board();
+            _gameBoard = new BoardScene();
             _gameBoard.Start();
         }
 
@@ -48,7 +48,6 @@ namespace TicTacToe
         {
             Console.Clear();
             _gameBoard.Draw();
-            Console.ReadKey();
         }
 
         /// <summary>
@@ -71,9 +70,6 @@ namespace TicTacToe
             }
 
             End();
-
-            string choice = Console.ReadLine();
-            int choiceConverted = Convert.ToInt32(choice);
         }
     }
 }
