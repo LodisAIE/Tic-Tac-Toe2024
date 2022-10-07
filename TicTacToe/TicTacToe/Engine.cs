@@ -18,8 +18,10 @@ namespace TicTacToe
 
         public static int GetInput()
         {
+            string choice = Console.ReadLine();
+            int choiceConverted = Convert.ToInt32(choice);
 
-            return 0;
+            return choiceConverted;
         }
 
         /// <summary>
